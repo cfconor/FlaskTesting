@@ -43,7 +43,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
                 <h1>Thorin &amp; Company</h1>
-                <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                <span class="subheading">Thorin and his company of Dwarves</span>
             </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
                 </a>
                 </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+            <p class="copyright text-muted">Copyright &copy; <span id="copyright"></span></p>
             </div>
         </div>
         </div>
@@ -103,6 +103,9 @@
     <!-- Custom scripts for this template -->
     <script src="{{ url_for('static',filename='js/clean-blog.min.js') }}"></script>
 
+    <script>
+        $("#copyright").text(new Date().getFullYear());
+    </script>
 
 </body>
 </html>
